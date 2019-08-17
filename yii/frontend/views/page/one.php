@@ -1,5 +1,5 @@
 <?php
-
+use rmrevin\yii\module\Comments;
 use common\models\User; ?>
 <div class="body-content">
     <div class="row">
@@ -27,4 +27,14 @@ use common\models\User; ?>
                     ['class' => 'btn btn-success']) ?>
             <?php } ?>
         </div>
+
+
+
+    </div>
+
+
+    <div style="border-top: solid;margin-top: 85px;">
+        <?= Comments\widgets\CommentListWidget::widget([
+            'entity' => (string) 'page'.$page->id,
+        ]);?>
     </div>

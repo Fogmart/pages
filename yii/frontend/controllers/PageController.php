@@ -17,12 +17,6 @@ class  PageController extends Controller
 {
 
 
-//    public function actionIndex()
-//    {
-//        $pages = Page::find()->all();
-//        return $this->render('all', ['blogs'=>$pages]);
-//    }
-
     public function actionCreate($groupid)
     {
         $model = new Page();

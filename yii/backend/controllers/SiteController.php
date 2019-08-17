@@ -29,13 +29,8 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error', 'logout'],
                         'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'save-redactor-image', 'save-image'],
-                        'allow' => true,
-                        'roles' => ['@'],
                     ],
                     [
                         'actions'=>['index'],
@@ -47,7 +42,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['post','get'],
                 ],
             ],
         ];
