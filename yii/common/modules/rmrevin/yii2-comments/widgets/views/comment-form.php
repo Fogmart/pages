@@ -43,10 +43,10 @@ $Widget = $this->context;
         ?>
         <div class="actions">
             <?php
-            echo Html::submitButton(\Yii::t('app', 'Post comment'), [
+            echo Html::submitButton(\Yii::t('app', 'Отправить'), [
                 'class' => 'btn btn-primary',
             ]);
-            echo Html::resetButton(\Yii::t('app', 'Cancel'), [
+            echo Html::resetButton(\Yii::t('app', 'Отмена'), [
                 'class' => 'btn btn-link',
             ]);
             ?>

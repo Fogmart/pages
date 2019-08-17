@@ -20,7 +20,7 @@ $CommentListWidget = $this->context;
 
 $comments = [];
 
-echo Html::tag('h3', Yii::t('app', 'Comments'), ['class' => 'comment-title']);
+echo Html::tag('h3', Yii::t('app', 'Комментарии'), ['class' => 'comment-title']);
 
 echo yii\widgets\ListView::widget([
     'dataProvider' => $CommentsDataProvider,
@@ -177,7 +177,7 @@ echo yii\widgets\ListView::widget([
 $CommentModel = \Yii::createObject(Comments\Module::instance()->model('comment'));
 
 if ($CommentListWidget->showCreateForm && $CommentModel::canCreate()) {
-    echo Html::tag('h3', Yii::t('app', 'Add comment'), ['class' => 'comment-title']);
+    echo Html::tag('h3', Yii::t('app', 'Добавить комментарий'), ['class' => 'comment-title']);
 
     echo Comments\widgets\CommentFormWidget::widget([
         'theme' => $CommentListWidget->theme,
