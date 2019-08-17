@@ -33,12 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'text:ntext',
             'url:url',
-            'sort',
         ],
     ]) ?>
 
     <?php if ($model->type_id == 1) { ?>
-        <iframe src="<?=$model->fullPhpUrl?>" name="mainframe" width="100%"> </iframe>
+        <iframe src="<?=$model->fullPhpUrl?>" name="mainframe" width="100%" height="1000px"> </iframe>
     <?php }?>
 
 

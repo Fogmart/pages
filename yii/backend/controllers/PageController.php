@@ -29,7 +29,7 @@ class PageController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions'=>['index','create','update', 'delete','assign'],
+                        'actions'=>['index','create','update', 'delete','assign','view', 'assigngroup'],
                         'allow' => true,
                         'roles' => ['admin'],
                     ]
