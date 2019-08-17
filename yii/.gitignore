@@ -18,8 +18,10 @@ nbproject
 Thumbs.db
 
 # composer vendor dir
-/vendor
-!/vendor/rmrevin
+
+/vendor/*
+!/vendor/rmrevin/
+
 
 # composer itself is not needed
 composer.phar
