@@ -19,9 +19,6 @@ Thumbs.db
 
 # composer vendor dir
 
-/vendor/*
-!/vendor/rmrevin/
-
 
 # composer itself is not needed
 composer.phar

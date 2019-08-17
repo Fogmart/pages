@@ -20,7 +20,7 @@ $CommentListWidget = $this->context;
 
 $comments = [];
 
-echo Html::tag('h3', Yii::t('app', 'Comments'), ['class' => 'comment-title']);
+echo Html::tag('h3', Yii::t('app', 'Комментарии'), ['class' => 'comment-title']);
 
 echo yii\widgets\ListView::widget([
     'dataProvider' => $CommentsDataProvider,
@@ -156,7 +156,7 @@ echo yii\widgets\ListView::widget([
                             }
 
                             if ($Comment->canDelete()) {
-                                 echo Html::a(
+                                echo Html::a(
                                     FA::icon('times') . ' ' . Yii::t('app', 'Delete'),
                                     Url::current(['delete-comment' => $Comment->id]),
                                     ['class' => 'btn btn-danger btn-xs']
@@ -177,7 +177,7 @@ echo yii\widgets\ListView::widget([
 $CommentModel = \Yii::createObject(Comments\Module::instance()->model('comment'));
 
 if ($CommentListWidget->showCreateForm && $CommentModel::canCreate()) {
-    echo Html::tag('h3', Yii::t('app', 'Add comment'), ['class' => 'comment-title']);
+    echo Html::tag('h3', Yii::t('app', 'Добавить комментарий'), ['class' => 'comment-title']);
 
     echo Comments\widgets\CommentFormWidget::widget([
         'theme' => $CommentListWidget->theme,
