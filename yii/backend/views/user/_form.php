@@ -24,6 +24,8 @@ use yii\widgets\ActiveForm;
         ->dropDownList(\common\models\User::USER_STATUSES) ?>
 
     <label class="control-label" >Группы</label>
+    <div class="row">
+        <div class="col-md-6">
     <table cellpadding="3" cellspacing="5" border="1" style="margin-bottom: 20px">
         <tr>
             <td>Название</td>
@@ -50,6 +52,11 @@ use yii\widgets\ActiveForm;
             </tr>
         <?php } ?>
     </table>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'canadmin')->checkbox() ?>
+        </div>
+    </div>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
