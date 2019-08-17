@@ -29,10 +29,13 @@ class User extends ActiveRecord implements IdentityInterface, CommentatorInterfa
     const STATUS_DELETED = 0;
     const STATUS_INACTIVE = 9;
     const STATUS_ACTIVE = 10;
+    const USER_STATUSES = [ '9'=> 'Не активен', '10'=>'Активен'];
 
     public $groups_arr;
     public $groups_read;
     public $groups_edit;
+
+
 
 
     /**

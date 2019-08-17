@@ -8,6 +8,7 @@ use common\models\PageGroup;
 use Yii;
 use common\models\Page;
 use common\models\PageSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\MethodNotAllowedHttpException;
 use yii\web\NotFoundHttpException;
@@ -24,6 +25,16 @@ class PageController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions'=>['index','create','update', 'delete','assign'],
+                        'allow' => true,
+                        'roles' => ['admin'],
+                    ]
+                ]
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [

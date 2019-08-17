@@ -20,10 +20,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
-
+    <?= $form->field($model, 'status' )
+        ->dropDownList(\common\models\User::USER_STATUSES) ?>
 
     <label class="control-label" >Группы</label>
-    <table cellpadding="3" cellspacing="5" border="1">
+    <table cellpadding="3" cellspacing="5" border="1" style="margin-bottom: 20px">
         <tr>
             <td>Название</td>
             <td>Читать</td>
